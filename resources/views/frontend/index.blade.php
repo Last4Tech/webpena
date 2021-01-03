@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/pena.png" rel="icon">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -25,10 +25,14 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/owlcarousel/owl.theme.default.min.css">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+
 
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Mamba - v2.5.0
@@ -68,7 +72,7 @@
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
           <li class="active"><a href="{{url('/')}}">Home</a></li>
-          <li><a href="#services">Berita</a></li>
+          <li><a href="#blog">Berita</a></li>
           <li><a href="#portfolio">Dokumentasi</a></li>
           <li><a href="#team">DKO</a></li>
           <li class="drop-down"><a href="">Profil</a>
@@ -99,7 +103,7 @@
             </ul>
           </li>
           <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#" class="btn-get-started">login</a></li>
+          <li><a href="login" class="btn-get-started">login</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -527,6 +531,7 @@
               </div>
             </div>
           </div>
+          <center><a href="blog"><button class="ready-btn" style="color:darkslategrey;">Lebih Banyak</button></a></center>
         </div>
       </div>
     </div><!-- End Blog Section -->
@@ -1009,16 +1014,16 @@
     </div>
 
     <div class="container">
-      <div class="copyright">
+      <!--<div class="copyright">
         &copy; Copyright <strong><span>Mamba</span></strong>. All Rights Reserved
-      </div>
+      </div>-->
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        Powered by _Last_4-AL
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/ 
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+        Presented by _Last_4-AL
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -1036,6 +1041,7 @@
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/nivo-slider/js/jquery.nivo.slider.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script>
     $(document).ready(function() {
