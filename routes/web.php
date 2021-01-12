@@ -14,13 +14,18 @@ use App\Http\Controllers\PageController;
 */
 
 /*Route::get('/', function () {
-    return view('frontend.index');
-});
+    return view('welcome');
+});*/
 
-Route::get('login', function () {
+/*Route::get('login', function () {
     return view('login.index');
 });*/
 
 Route::get('/', [PageController::class ,'home']);
 Route::get('/blog', [PageController::class ,'blog']);
 Route::get('/page', [PageController::class ,'page']);
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

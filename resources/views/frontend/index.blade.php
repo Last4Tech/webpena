@@ -11,22 +11,22 @@
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{url('/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/vendor/owlcarousel/owl.theme.default.min.css">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/vendor/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+  <link href="{{url('/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url('/assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{url('/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{url('/assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{url('/assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{url('/assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="{{url('/vendor/owlcarousel/owl.theme.default.min.css')}}">
+  <link href="{{url('/assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{url('/assets/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{[url('/assets/vendor/nivo-slider/css/nivo-slider.css')]}" rel="stylesheet">
 
 
 
@@ -103,7 +103,7 @@
             </ul>
           </li>
           <li><a href="#contact">Contact Us</a></li>
-          <li><a href="login" class="btn-get-started">login</a></li>
+          <li><a href="{{url('/admin')}}" class="btn-get-started">login</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -180,7 +180,7 @@
 
             <div class="section-title">
               <h2>About Us</h2>
-              <p>Merupakan Organisasi Kemahasiswaan Fakultas Ilmu Pendidikan Universitas Trunojoyo yang Bergerak di Bidang Pengembangan Penelitian dan Penalaran.</p>
+              <p>Merupakan Organisasi Kemahasiswaan Fakultas Ilmu Pendidikan Universitas Trunojoyo Madura yang Bergerak di Bidang Pengembangan Penelitian dan Penalaran.</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
