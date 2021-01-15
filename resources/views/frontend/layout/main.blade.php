@@ -11,28 +11,28 @@
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/vendor/owlcarousel/owl.theme.default.min.css">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/vendor/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('assets/vendor/owlcarousel/owl.theme.default.min.css')}}">
+  <link href="{{ asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/nivo-slider/css/nivo-slider.css')}}" rel="stylesheet">
 
 
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/css/custom.css')}}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Mamba - v2.5.0
@@ -72,16 +72,16 @@
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
           <li class="active"><a href="{{url('/')}}">Home</a></li>
-          <li><a href="blog">Berita</a></li>
-          <li><a href="portfolio">Dokumentasi</a></li>
-          <li><a href="team">DKO</a></li>
+          <li><a href="{{url('/post')}}">Berita</a></li>
+          <li><a href="{{url('/galery')}}">Dokumentasi</a></li>
+          <li><a href="{{url('/')}}">DKO</a></li>
           <li class="drop-down"><a href="">Profil</a>
             <ul>
-              <li><a href="#">Sejarah</a></li>
-              <li><a href="#">Visi Misi</a></li>
+              <li><a href="{{url('/sejarah')}}">Sejarah</a></li>
+              <li><a href="{{url('/visi')}}">Visi Misi</a></li>
               <li class="drop-down"><a href="#">Struktur</a>
                 <ul>
-                  <li><a href="#">Dewan Kehormatan</a></li>
+                  <li><a href="{{url('/dko')}}">Dewan Kehormatan</a></li>
                   <li><a href="#">Dewan Pertimbangan</a></li>
                   <li><a href="#">Badan Pengrus Harian</a></li>
                   <li><a href="#">Devivi Internal</a></li>
@@ -183,18 +183,18 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/nivo-slider/js/jquery.nivo.slider.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="{{ asset('assets/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ asset('assets/vendor/jquery-sticky/jquery.sticky.js')}}"></script>
+  <script src="{{ asset('assets/vendor/venobox/venobox.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/counterup/counterup.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/nivo-slider/js/jquery.nivo.slider.js')}}"></script>
+  <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script>
   <script>
     $(document).ready(function() {
       $(".owl-carousel").owlCarousel({
@@ -209,7 +209,7 @@
   </script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ asset('assets/js/main.js')}}"></script>
 
 </body>
 

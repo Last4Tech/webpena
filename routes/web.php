@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,9 +22,9 @@ use App\Http\Controllers\PageController;
     return view('login.index');
 });*/
 
-Route::get('/', [PageController::class ,'home']);
-Route::get('/blog', [PageController::class ,'blog']);
-Route::get('/page', [PageController::class ,'page']);
+Route::get('/', [PageController::class, 'home']);
+Route::get('/post', [PostController::class, 'index']);
+Route::get('/post/{post}', [PostController::class, 'show']);
 
 
 Route::group(['prefix' => 'admin'], function () {

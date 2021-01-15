@@ -3,16 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use TCG\Voyager\Models\Category;
+use TCG\Voyager\Models\Post as ModelsPost;
 
 class PageController extends Controller
 {
     public function home (){
-        return view('frontend.index');
+        $post = ModelsPost::all();
+        return view('frontend.index',['post'=>$post]);
     }
-    public function blog (){
-        return view('frontend.blog');
-    } 
-    public function page(){
-        return view('frontend.page');
-    }
+     
 }

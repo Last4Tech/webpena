@@ -49,7 +49,7 @@
     <div class="container clearfix">
       <div class="contact-info float-left">
         <i class="icofont-envelope"></i><a href="mailto:contact@example.com">info@ukmfippena.or.id</a>
-        <i class="icofont-phone">database</i>
+        <i class="icofont-phone">082337193376</i>
       </div>
       <div class="social-links float-right">
         <a href="https://www.facebook.com/ukmf.p.utm" class="facebook"><i class="icofont-facebook"></i></a>
@@ -78,6 +78,7 @@
           <li class="drop-down"><a href="">Profil</a>
             <ul>
               <li><a href="#">Sejarah</a></li>
+              <li><a href="#">Arti Lambang</a></li>
               <li><a href="#">Visi Misi</a></li>
               <li class="drop-down"><a href="#">Struktur</a>
                 <ul>
@@ -352,11 +353,12 @@
             </div>
           </div>
           <div class="owl-carousel owl-theme">
+          @foreach ($post as $itemPost)
             <div class="mr-2 ml-2">
               <div class="single-blog">
                 <div class="single-blog-img">
-                  <a href="blog.html">
-                    <img src="assets/img/blog/1.jpg" alt="" width="100%">
+                  <a href="#">
+                    <img src="{{Voyager::image($itemPost->thumbnail('cropped'))}}" alt="" width="100%">
                   </a>
                 </div>
                 <div class="blog-meta">
@@ -365,173 +367,26 @@
                     <a href="#">13 comments</a>
                   </span>
                   <span class="date-type">
-                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
+                    <i class="fa fa-calendar"></i>{{$itemPost->created_at}}
                   </span>
                 </div>
                 <div class="blog-text">
                   <h4>
-                    <a href="blog.html">Assumenda repud eum veniam</a>
+                    <a href="blog.html">{{$itemPost->title}}</a>
                   </h4>
                   <p>
-                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
+                    {{$itemPost->excerpt}}
                   </p>
                 </div>
                 <span>
-                  <a href="blog.html" class="ready-btn">Read more</a>
+                  <a href="/post/{{$itemPost->slug}}" class="ready-btn">Read more</a>
                 </span>
               </div>
               <!-- Start single blog -->
             </div>
-            <div class="mr-2 ml-2">
-              <div class="single-blog">
-                <div class="single-blog-img">
-                  <a href="blog.html">
-                    <img src="assets/img/blog/2.jpg" alt="" width="100%">
-                  </a>
-                </div>
-                <div class="blog-meta">
-                  <span class="comments-type">
-                    <i class="fa fa-comment-o"></i>
-                    <a href="#">130 comments</a>
-                  </span>
-                  <span class="date-type">
-                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                  </span>
-                </div>
-                <div class="blog-text">
-                  <h4>
-                    <a href="blog.html">Explicabo magnam quibusdam.</a>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
-                  </p>
-                </div>
-                <span>
-                  <a href="blog.html" class="ready-btn">Read more</a>
-                </span>
-              </div>
-              <!-- Start single blog -->
-            </div>
-            <div class="mr-2 ml-2">
-              <div class="single-blog">
-                <div class="single-blog-img">
-                  <a href="blog.html">
-                    <img src="assets/img/blog/3.jpg" alt="" width="100%">
-                  </a>
-                </div>
-                <div class="blog-meta">
-                  <span class="comments-type">
-                    <i class="fa fa-comment-o"></i>
-                    <a href="#">10 comments</a>
-                  </span>
-                  <span class="date-type">
-                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                  </span>
-                </div>
-                <div class="blog-text">
-                  <h4>
-                    <a href="blog.html">Lorem ipsum dolor sit amet</a>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
-                  </p>
-                </div>
-                <span>
-                  <a href="blog.html" class="ready-btn">Read more</a>
-                </span>
-              </div>
-            </div>
-            <div class="mr-2 ml-2">
-              <div class="single-blog">
-                <div class="single-blog-img">
-                  <a href="blog.html">
-                    <img src="assets/img/blog/1.jpg" alt="" width="100%">
-                  </a>
-                </div>
-                <div class="blog-meta">
-                  <span class="comments-type">
-                    <i class="fa fa-comment-o"></i>
-                    <a href="#">13 comments</a>
-                  </span>
-                  <span class="date-type">
-                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                  </span>
-                </div>
-                <div class="blog-text">
-                  <h4>
-                    <a href="blog.html">Assumenda repud eum veniam</a>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
-                  </p>
-                </div>
-                <span>
-                  <a href="blog.html" class="ready-btn">Read more</a>
-                </span>
-              </div>
-              <!-- Start single blog -->
-            </div>
-            <div class="mr-2 ml-2">
-              <div class="single-blog">
-                <div class="single-blog-img">
-                  <a href="blog.html">
-                    <img src="assets/img/blog/2.jpg" alt="" width="100%">
-                  </a>
-                </div>
-                <div class="blog-meta">
-                  <span class="comments-type">
-                    <i class="fa fa-comment-o"></i>
-                    <a href="#">130 comments</a>
-                  </span>
-                  <span class="date-type">
-                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                  </span>
-                </div>
-                <div class="blog-text">
-                  <h4>
-                    <a href="blog.html">Explicabo magnam quibusdam.</a>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
-                  </p>
-                </div>
-                <span>
-                  <a href="blog.html" class="ready-btn">Read more</a>
-                </span>
-              </div>
-              <!-- Start single blog -->
-            </div>
-            <div class="mr-2 ml-2">
-              <div class="single-blog">
-                <div class="single-blog-img">
-                  <a href="blog.html">
-                    <img src="assets/img/blog/3.jpg" alt="" width="100%">
-                  </a>
-                </div>
-                <div class="blog-meta">
-                  <span class="comments-type">
-                    <i class="fa fa-comment-o"></i>
-                    <a href="#">10 comments</a>
-                  </span>
-                  <span class="date-type">
-                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                  </span>
-                </div>
-                <div class="blog-text">
-                  <h4>
-                    <a href="blog.html">Lorem ipsum dolor sit amet</a>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
-                  </p>
-                </div>
-                <span>
-                  <a href="blog.html" class="ready-btn">Read more</a>
-                </span>
-              </div>
-            </div>
+          @endforeach
           </div>
-          <center><a href="blog"><button class="ready-btn" style="color:darkslategrey;">Lebih Banyak</button></a></center>
+          <center><a href="/post"><button class="ready-btn" style="color:darkslategrey;">Lebih Banyak</button></a></center>
         </div>
       </div>
     </div><!-- End Blog Section -->
