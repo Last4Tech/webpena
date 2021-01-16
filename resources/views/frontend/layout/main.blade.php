@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico')}}">
   <link href="{{ asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -77,8 +77,9 @@
           <li><a href="{{url('/')}}">DKO</a></li>
           <li class="drop-down"><a href="">Profil</a>
             <ul>
-              <li><a href="{{url('/sejarah')}}">Sejarah</a></li>
-              <li><a href="{{url('/visi')}}">Visi Misi</a></li>
+              <li><a href="{{url('/2')}}">Sejarah</a></li>
+              <li><a href="{{url('/3')}}">Arti Lambang</a></li>
+              <li><a href="{{url('/4')}}">Visi Misi</a></li>
               <li class="drop-down"><a href="#">Struktur</a>
                 <ul>
                   <li><a href="{{url('/dko')}}">Dewan Kehormatan</a></li>

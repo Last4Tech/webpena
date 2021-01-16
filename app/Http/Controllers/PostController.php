@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User as ModelsUser;
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\Category;
 use TCG\Voyager\Models\Post;
+use TCG\Voyager\Models\User;
 
 class PostController extends Controller
 {
@@ -50,10 +52,10 @@ class PostController extends Controller
      */
     public function show($slug)
     {
-        $blog = Post::all();
+        $blog = Post::latest()->get()->random(3);
         $post = Post::where('slug', '=', $slug)->firstOrFail();
         $category = Category::all();
-        return view('frontend.page', ['post'=>$post, 'category'=>$category, 'blog'=>$blog]);
+        return view('frontend.page', compact('blog','post', 'category'));
     }
 
     /**

@@ -74,19 +74,7 @@
                   <div class="post-information">
                     <h2></h2>
                     <div class="entry-meta">
-                      <span class="author-meta"><i class="fa fa-user"></i> <a href="#">admin</a></span>
                       <span><i class="fa fa-clock-o"></i> {{$post->created_at}} </span>
-                      <span class="tag-meta">
-                        <i class="fa fa-folder-o"></i>
-                        <a href="#">painting</a>,
-                        <a href="#">work</a>
-                      </span>
-                      <span>
-                        <i class="fa fa-tags"></i>
-                        <a href="#">tools</a>,
-                        <a href="#"> Humer</a>,
-                        <a href="#">House</a>
-                      </span>
                       <span><i class="fa fa-comments-o"></i> <a href="#">6 comments</a></span>
                     </div>
                     <div class="entry-content">

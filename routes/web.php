@@ -25,6 +25,7 @@ use App\Http\Controllers\PostController;
 Route::get('/', [PageController::class, 'home']);
 Route::get('/post', [PostController::class, 'index']);
 Route::get('/post/{post}', [PostController::class, 'show']);
+Route::get('/{page}', [PageController::class, 'show']);
 
 
 Route::group(['prefix' => 'admin'], function () {
