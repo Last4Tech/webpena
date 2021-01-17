@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\GaleryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,13 +22,14 @@ use App\Http\Controllers\PostController;
 /*Route::get('login', function () {
     return view('login.index');
 });*/
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
 
 Route::get('/', [PageController::class, 'home']);
 Route::get('/post', [PostController::class, 'index']);
 Route::get('/post/{post}', [PostController::class, 'show']);
 Route::get('/{page}', [PageController::class, 'show']);
+Route::get('/galery/{slug}', [GaleryController::class, 'show']);
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});

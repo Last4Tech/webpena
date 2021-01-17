@@ -1444,6 +1444,10 @@ span.email-notes {
 /*--------------------------------------------------------------
 # Our Portfolio
 --------------------------------------------------------------*/
+.upper { text-transform: uppercase; }
+.lower { text-transform: lowercase; }
+.cap   { text-transform: capitalize; }
+.small { font-variant:   small-caps; }
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
