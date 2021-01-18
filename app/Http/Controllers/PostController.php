@@ -20,7 +20,7 @@ class PostController extends Controller
         $blog = Post::latest()->get()->random(3);
         $post = Post::paginate(5);
         $category = Category::all();
-        return view('frontend.blog', compact('post', 'category', 'blog'));
+        return view('frontend.post.blog', compact('post', 'category', 'blog'));
     }
 
     /**
@@ -55,7 +55,7 @@ class PostController extends Controller
         $blog = Post::latest()->get()->random(3);
         $post = Post::where('slug', '=', $slug)->firstOrFail();
         $category = Category::all();
-        return view('frontend.page', compact('blog','post', 'category'));
+        return view('frontend.post.page', compact('blog','post', 'category'));
     }
 
     /**

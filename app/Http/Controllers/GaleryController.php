@@ -14,7 +14,9 @@ class GaleryController extends Controller
      */
     public function index()
     {
-        //
+        $galery = Galery::all();
+        $kd = Galery::distinct()->get(['category_id']);
+        return view('frontend.galery.index', compact('galery', 'kd'));
     }
 
     /**
@@ -47,7 +49,7 @@ class GaleryController extends Controller
     public function show($slug)
     {
         $galery = Galery::where('slug', '=', $slug)->firstOrFail();
-        return view('frontend.galery', compact('galery'));
+        return view('frontend.galery.show', compact('galery'));
     }
 
     /**

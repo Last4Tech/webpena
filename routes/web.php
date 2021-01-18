@@ -29,7 +29,9 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/', [PageController::class, 'home']);
 Route::get('/post', [PostController::class, 'index']);
 Route::get('/post/{post}', [PostController::class, 'show']);
-Route::get('/{page}', [PageController::class, 'show']);
+Route::get('/page', [PageController::class, 'index']);
+Route::get('/page/{slug}', [PageController::class, 'show']);
+Route::get('/galery', [GaleryController::class, 'index']);
 Route::get('/galery/{slug}', [GaleryController::class, 'show']);
 
 

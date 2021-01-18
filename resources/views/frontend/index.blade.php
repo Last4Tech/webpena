@@ -75,7 +75,7 @@
           <li><a href="#blog">Berita</a></li>
           <li><a href="#portfolio">Dokumentasi</a></li>
           <li><a href="#team">DKO</a></li>
-          <li class="drop-down"><a href="">Profil</a>
+          <li class="drop-down"><a href="{{'/page'}}">Profil</a>
             <ul>
               <li><a href="#">Sejarah</a></li>
               <li><a href="#">Arti Lambang</a></li>

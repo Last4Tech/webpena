@@ -75,9 +75,9 @@
           <li><a href="{{url('/post')}}">Berita</a></li>
           <li><a href="{{url('/galery')}}">Dokumentasi</a></li>
           <li><a href="{{url('/')}}">DKO</a></li>
-          <li class="drop-down"><a href="">Profil</a>
+          <li class="drop-down"><a href="{{url('/page')}}">Profil</a>
             <ul>
-              <li><a href="{{url('/2')}}">Sejarah</a></li>
+              <li><a href="{{url('/page')}}">Sejarah</a></li>
               <li><a href="{{url('/3')}}">Arti Lambang</a></li>
               <li><a href="{{url('/4')}}">Visi Misi</a></li>
               <li class="drop-down"><a href="#">Struktur</a>

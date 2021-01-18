@@ -12,8 +12,6 @@
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="page-head-blog">
               <div class="single-blog-page">
-                <!-- search option start -->
-                <form action="#">
                   <div class="search-option">
                     <input type="text" placeholder="Search...">
                     <button class="button" type="submit">
@@ -32,12 +30,12 @@
                     <!-- start single post -->
                     <div class="recent-single-post">
                       <div class="post-img">
-                        <a href="#">
+                        <a href="/post/{{$Itemblog->slug}}">
                           <img src="{{voyager::image($Itemblog->thumbnail('cropped'))}}" alt="">
                         </a>
                       </div>
                       <div class="pst-content">
-                        <p><a href="#"> {{$Itemblog->title}}</a></p>
+                        <p><a href="/post/{{$Itemblog->slug}}"> {{$Itemblog->title}}</a></p>
                       </div>
                     </div>
                     <!-- End single post -->
