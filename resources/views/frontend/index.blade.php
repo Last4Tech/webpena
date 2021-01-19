@@ -186,14 +186,14 @@
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Sejarah Singkat</a></h4>
+              <h4 class="title"><a href="{{url('/page/sejarah-ukm-fkip-pena')}}">Sejarah Singkat</a></h4>
               <p class="description">UKM FKIP PENA didirikan pada tanggal 3 Juni 2014. ....</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Profil Ketua</a></h4>
-              <p class="description">Ketua Umum UKM FIP PENA ADALAH ...</p>
+              <h4 class="title"><a href="{{url('/page/arti-lambang')}}">Arti Lambang</a></h4>
+              <p class="description">Lambang UKM FIP PENA MEiliki arti ...</p>
             </div>
 
           </div>
@@ -353,7 +353,7 @@
             </div>
           </div>
           <div class="owl-carousel owl-theme">
-          @foreach ($post as $itemPost)
+            @foreach ($post as $itemPost)
             <div class="mr-2 ml-2">
               <div class="single-blog">
                 <div class="single-blog-img">
@@ -384,7 +384,7 @@
               </div>
               <!-- Start single blog -->
             </div>
-          @endforeach
+            @endforeach
           </div>
           <center><a href="/post"><button class="ready-btn" style="color:darkslategrey;">Lebih Banyak</button></a></center>
         </div>
@@ -410,7 +410,7 @@
         </div>
 
         <div class="row portfolio-container">
-        @foreach($image as $img)
+          @foreach($image as $img)
           <div class="col-lg-4 col-md-6 portfolio-item filter-{{$img->category_id}}">
             <div class="portfolio-wrap">
               <img src="{{Voyager::image($img->thumbnail('cropped', 'image_1'))}}" class="img-fluid" alt="">
@@ -424,7 +424,7 @@
               </div>
             </div>
           </div>
-        @endforeach
+          @endforeach
         </div>
 
       </div>
@@ -668,7 +668,8 @@
           </div> -->
 
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="{{route('contact.send')}}" method="POST" role="form" class="php-email-form">
+              @csrf
               <div class="form-row">
                 <div class="col-lg-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -693,6 +694,7 @@
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
+
             </form>
           </div>
 
@@ -728,8 +730,8 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{{url('/')}}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Berita Terabru</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/page')}}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/post')}}">Berita Terabru</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Kegiatan</a></li>
             </ul>
           </div>
@@ -746,10 +748,15 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
-            <form action="" method="post">
+            @if (session('status'))
+              <div class="alert alert-success">
+                {{ session('status') }}
+              </div>
+            @endif
+            <form action="{{route('sub.send')}}" method="post">
+              @csrf
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
-
           </div>
 
         </div>

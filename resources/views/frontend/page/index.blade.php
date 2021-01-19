@@ -81,7 +81,7 @@
                   </p>
                 </div>
                 <span>
-                  <a href="/post/{{$itemPage->slug}}" class="ready-btn">Read more</a>
+                  <a href="/page/{{$itemPage->slug}}" class="ready-btn">Read more</a>
                 </span>
               </div>
             </div>

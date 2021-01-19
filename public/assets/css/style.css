@@ -1820,7 +1820,7 @@ span.email-notes {
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #ed3c0d;
+  background: blue;
   text-align: left;
   padding: 15px;
   font-weight: 600;

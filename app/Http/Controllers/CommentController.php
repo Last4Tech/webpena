@@ -3,13 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\comment;
-use App\Models\User as ModelsUser;
 use Illuminate\Http\Request;
-use TCG\Voyager\Models\Category;
 use TCG\Voyager\Models\Post;
-use TCG\Voyager\Models\User;
+use App\Http\Controllers\PostController;
 
-class PostController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $blog = Post::latest()->get()->random(3);
-        $post = Post::paginate(5);
-        $category = Category::all();
-        return view('frontend.post.blog', compact('post', 'category', 'blog'));
+        //
     }
 
     /**
@@ -48,18 +43,12 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $slug
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        $blog = Post::latest()->get()->random(3);
-        $id = Post::where('slug', $slug)->value('id');
-        $post = Post::where('slug', '=', $slug)->firstOrFail();
-        $category = Category::all();
-        $komen = comment::all();
-        $jml = comment::where('post_id', $id)->count('comment');
-        return view('frontend.post.page', compact('blog','post', 'category', 'komen', 'id', 'jml'));
+        
     }
 
     /**
@@ -80,18 +69,25 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function insertdata(Request $request, $slug)
+    public function insertdata(Request $request, $id)
     {
-        $hasil = Post::find($slug);
+        $request->validate([
+            'name' =>'required',
+            'email' => 'required',
+            'website' => 'required',
+            'comment' => 'required',
+        ]);
+        $hasil = Post::find($id);
+        $slug = Post::where('id', $id)->value('slug');
         $user = new comment();
         $user->name = $request->name;
         $user->email = $request->email;
         $user->website = $request->website;
         $user->comment = $request->comment;
-        $user->post_slug = $request->slug;
+        $user->post_id = $request->id;
         $user->save();
 
-        return redirect()->action(PostController::class, 'show', ['slug'=>$slug]);
+        return redirect()->action([PostController::class, 'show'], ['post'=>$slug]);
     }
 
     /**

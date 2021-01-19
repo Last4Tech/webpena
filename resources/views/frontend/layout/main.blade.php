@@ -74,12 +74,12 @@
           <li class="active"><a href="{{url('/')}}">Home</a></li>
           <li><a href="{{url('/post')}}">Berita</a></li>
           <li><a href="{{url('/galery')}}">Dokumentasi</a></li>
-          <li><a href="{{url('/')}}">DKO</a></li>
+          <li><a href="{{url('/ dko')}}">DKO</a></li>
           <li class="drop-down"><a href="{{url('/page')}}">Profil</a>
             <ul>
-              <li><a href="{{url('/page')}}">Sejarah</a></li>
-              <li><a href="{{url('/3')}}">Arti Lambang</a></li>
-              <li><a href="{{url('/4')}}">Visi Misi</a></li>
+              <li><a href="{{url('/page/sejarah-ukm-fkip-pena')}}">Sejarah</a></li>
+              <li><a href="{{url('/page/arti-lambang')}}">Arti Lambang</a></li>
+              <li><a href="{{url('/page/visi-misi')}}">Visi Misi</a></li>
               <li class="drop-down"><a href="#">Struktur</a>
                 <ul>
                   <li><a href="{{url('/dko')}}">Dewan Kehormatan</a></li>
@@ -103,7 +103,7 @@
               <li><a href="">PENA SHOW</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="/contact">Contact Us</a></li>
           <li><a href="login" class="btn-get-started">login</a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -138,8 +138,8 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{{url('/')}}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Berita Terabru</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/page')}}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/post')}}">Berita Terbaru</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Kegiatan</a></li>
             </ul>
           </div>
@@ -147,7 +147,7 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Link Terkait</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Database Anggta</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Database Anggota</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Sistem E-Voting</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Pena Menulis</a></li>
             </ul>
@@ -156,7 +156,8 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
-            <form action="" method="post">
+            <form action="{{route('sub.send')}}" method="post">
+            @csrf
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
 
