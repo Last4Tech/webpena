@@ -80,18 +80,25 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function insertdata(Request $request, $slug)
+    public function insertdata(Request $request, $id)
     {
-        $hasil = Post::find($slug);
+        $request->validate([
+            'name' =>'required',
+            'email' => 'required',
+            'comment' => 'required'
+        ]);
+        
         $user = new comment();
         $user->name = $request->name;
         $user->email = $request->email;
         $user->website = $request->website;
         $user->comment = $request->comment;
-        $user->post_slug = $request->slug;
+        $user->post_id = $id;
         $user->save();
 
-        return redirect()->action(PostController::class, 'show', ['slug'=>$slug]);
+        $slug = Post::where('id', $id)->value('slug');
+
+        return redirect()->action([PostController::class, 'show'], ['post'=>$slug]);
     }
 
     /**

@@ -74,15 +74,15 @@
           <li class="active"><a href="{{url('/')}}">Home</a></li>
           <li><a href="{{url('/post')}}">Berita</a></li>
           <li><a href="{{url('/galery')}}">Dokumentasi</a></li>
-          <li><a href="{{url('/ dko')}}">DKO</a></li>
+          <li><a href="{{url('/struktur/dewan-kehormatan-organisasi')}}">DKO</a></li>
           <li class="drop-down"><a href="{{url('/page')}}">Profil</a>
             <ul>
               <li><a href="{{url('/page/sejarah-ukm-fkip-pena')}}">Sejarah</a></li>
               <li><a href="{{url('/page/arti-lambang')}}">Arti Lambang</a></li>
               <li><a href="{{url('/page/visi-misi')}}">Visi Misi</a></li>
-              <li class="drop-down"><a href="#">Struktur</a>
+              <li class="drop-down"><a href="{{url('/struktur/organisasi')}}">Struktur</a>
                 <ul>
-                  <li><a href="{{url('/dko')}}">Dewan Kehormatan</a></li>
+                  <li><a href="{{url('/struktur/dewan-kehormatan-organisasi')}}">Dewan Kehormatan</a></li>
                   <li><a href="#">Dewan Pertimbangan</a></li>
                   <li><a href="#">Badan Pengrus Harian</a></li>
                   <li><a href="#">Devivi Internal</a></li>
@@ -202,10 +202,21 @@
       $(".owl-carousel").owlCarousel({
         autoplay: true,
         autoplayHoverPause: true,
-        items: 3,
-        nav: true,
-        dots: true,
         loop: true,
+        responsive: {
+          0:{
+            items: 1,
+            nav: false
+          },
+          600:{
+            items: 2,
+            nav: false
+          },
+          1000:{
+            items: 3,
+            nav: true
+          }
+        }
       });
     });
   </script>

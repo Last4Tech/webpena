@@ -6,6 +6,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\CommentController;
+use TCG\Voyager\Models\Struktur;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +33,8 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/post', [PostController::class, 'index']);
 Route::get('/page', [PageController::class, 'index']);
+Route::post('/post/{post}', [PostController::class, 'insertdata'])->name('InsertData');
+Route::post('/page/{page}', [pageController::class, 'insertcoment'])->name('Insertcoment');
 Route::get('/post/{post}', [PostController::class, 'show'])->name('PostStage');
 Route::get('/page/{slug}', [PageController::class, 'show']);
 Route::get('/galery', [GaleryController::class, 'index']);
@@ -38,6 +42,6 @@ Route::get('/galery/{slug}', [GaleryController::class, 'show']);
 Route::get('/contact', [ContactUsController::class, 'index']);
 Route::post('/contact', [ContactUsController::class, 'sendemail'])->name('contact.send');
 Route::post('/sub', [ContactUsController::class, 'Subscribe'])->name('sub.send');
-Route::post('/comment/{id}', [CommentController::class, 'insertdata'])->name('InsertData');
+Route::get('/struktur/{slug}', [PageController::class, 'Struktur']);
 
 

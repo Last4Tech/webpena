@@ -113,7 +113,7 @@
                 <div class="comment-respond">
                   <h3 class="comment-reply-title">Leave a Reply </h3>
                   <span class="email-notes">Your email address will not be published. Required fields are marked *</span>
-                  <form action="/comment/{{$post->id}}" method="post" role="form">
+                  <form action="/post/{{$post->id}}" method="post" role="form">
                     @csrf
                     <div class="row">
                       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
