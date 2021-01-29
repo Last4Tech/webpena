@@ -9,10 +9,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Detail Dokumentasi</h2>
+          <h2>Detail Struktur</h2>
           <ol>
             <li><a href="{{url('/')}}">Home</a></li>
-            <li>Detail Dokumentasi</li>
+            <li>Detail Struktur</li>
           </ol>
         </div>
 

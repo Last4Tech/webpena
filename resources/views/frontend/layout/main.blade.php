@@ -80,27 +80,27 @@
               <li><a href="{{url('/page/sejarah-ukm-fkip-pena')}}">Sejarah</a></li>
               <li><a href="{{url('/page/arti-lambang')}}">Arti Lambang</a></li>
               <li><a href="{{url('/page/visi-misi')}}">Visi Misi</a></li>
+              <li><a href="{{url('/leader')}}">Ketua Umum</a></li>
               <li class="drop-down"><a href="{{url('/struktur/organisasi')}}">Struktur</a>
                 <ul>
                   <li><a href="{{url('/struktur/dewan-kehormatan-organisasi')}}">Dewan Kehormatan</a></li>
-                  <li><a href="#">Dewan Pertimbangan</a></li>
-                  <li><a href="#">Badan Pengrus Harian</a></li>
-                  <li><a href="#">Devivi Internal</a></li>
-                  <li><a href="#">Devisi Eksternal</a></li>
-                  <li><a href="#">Devisi Event</a></li>
+                  <li><a href="{{url('/struktur/dewan-pertimbangan-organisasi')}}">Dewan Pertimbangan</a></li>
+                  <li><a href="{{url('/struktur/bph')}}">Badan Pengrus Harian</a></li>
+                  <li><a href="{{url('/struktur/devisi-internal')}}">Devivi Internal</a></li>
+                  <li><a href="{{url('/struktur/devisi-ekternal')}}">Devisi Eksternal</a></li>
+                  <li><a href="{{url('/struktur/devisi-event')}}">Devisi Event</a></li>
                 </ul>
               </li>
-              <li><a href="#">Prestasi</a></li>
+              <li><a href="{{url('/post?term=prestasi')}}">Prestasi</a></li>
             </ul>
           </li>
           <li class="drop-down"><a href="">Kegiatan</a>
             <ul>
-              <li><a href="">KAJIAN</a></li>
-              <li><a href="">SEMINAR</a></li>
-              <li><a href="">PENA BULAN PKM</a></li>
-              <li><a href="">PENA EMAS</a></li>
-              <li><a href="">RATE NEM</a></li>
-              <li><a href="">PENA SHOW</a></li>
+              <li><a href="{{url('/post?term=kajian')}}">KAJIAN</a></li>
+              <li><a href="{{url('/post?term=seminar')}}">SEMINAR</a></li>
+              <li><a href="{{url('/post?term=pena+bulan+pkm')}}">PENA BULAN PKM</a></li>
+              <li><a href="{{url('/post?term=pena+emas')}}">PENA EMAS</a></li>
+              <li><a href="{{url('/post?term=rate+nem')}}">RATE NEM</a></li>
             </ul>
           </li>
           <li><a href="{{url('/contact')}}">Contact Us</a></li>

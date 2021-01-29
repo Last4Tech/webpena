@@ -74,7 +74,7 @@
                 </div>
                 <div class="blog-text">
                   <h4>
-                    <a href="#">{{$itemPage->title}}</a>
+                    <a href="/page/{{$itemPage->slug}}">{{$itemPage->title}}</a>
                   </h4>
                   <p>
                   {{$itemPage->excerpt}}

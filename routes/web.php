@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\CommentController;
+use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Struktur;
 
 /*
@@ -43,5 +44,4 @@ Route::get('/contact', [ContactUsController::class, 'index']);
 Route::post('/contact', [ContactUsController::class, 'sendemail'])->name('contact.send');
 Route::post('/sub', [ContactUsController::class, 'Subscribe'])->name('sub.send');
 Route::get('/struktur/{slug}', [PageController::class, 'Struktur']);
-
-
+Route::get('/leader', [PageController::class, 'leader']);

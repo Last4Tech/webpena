@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Leader;
 use Illuminate\Http\Request;
 use PagesTableSeeder;
 use TCG\Voyager\Models\Category;
@@ -17,7 +19,7 @@ class PageController extends Controller
         $id = Post::where('id', '=', $post)->value('id');
         $category = Category::all();
         $kd = Galery::distinct()->get(['category_id']);
-        $image = Galery::all();
+        $image = Galery::latest()->get()->random(9);
         $jml = comment::where('post_id', $id)->count('comment');
         return view('frontend.index', compact('post', 'category', 'image', 'kd', 'jml'));
     }
@@ -55,5 +57,9 @@ class PageController extends Controller
     public function Struktur($slug){
         $code = Struktur::where('slug', '=', $slug)->firstOrFail();
         return view('frontend.struktur', compact('code'));
+    }
+    public function leader(){
+        $leader = Leader::all();
+        return view('frontend.leader', compact('leader'));
     }
 }

@@ -16,12 +16,20 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $post = Post::where([
+            ['title', '!=', null],
+            [function ($query) use ($request) {
+                if (($term =$request->term)) {
+                    $query->orWhere('title','LIKE', '%'. $term. '%')->get();
+                }
+            }]
+        ])->orderBy("id","desc")->paginate(5);
         $blog = Post::latest()->get()->random(3);
-        $post = Post::paginate(5);
+        $all = Post::latest()->paginate(5);
         $category = Category::all();
-        return view('frontend.post.blog', compact('post', 'category', 'blog'));
+        return view('frontend.post.blog', compact('post', 'category', 'blog'))->with('i', (request()->input('page', 1)- 1) *5);
     }
 
     /**
@@ -107,8 +115,15 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function cari(Request $request)
     {
-        //
+        $post = Post::where([
+            ['title', '!=', null],
+            [function ($query) use ($request) {
+                if (($term =$request->term)) {
+                    $query->orWhere('name','LIKE', '%'. $term. '%')->get();
+                }
+            }]
+        ])->orderBy("id","desc")->paginate(5);
     }
 }

@@ -34,7 +34,6 @@
           <div class="portfolio-info">
             <h3>detail geleri foto</h3>
             <ul>
-              <li><strong>Categori</strong>: {{$galery->cetogory_id}}</li>
               <li><strong>Kegiatan</strong>: {{$galery->title}}</li>
               <li><strong>pelaksanaan</strong>: {{$galery->tanggal}}</li>
               <li><strong>Tempat</strong>: {{$galery->tempat}}</li>

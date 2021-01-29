@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use TCG\Voyager\Models\Category;
 use TCG\Voyager\Models\Galery;
 
 class GaleryController extends Controller

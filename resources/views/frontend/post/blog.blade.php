@@ -4,7 +4,7 @@
 <main id="main">
 
   <!-- ======= Blog Header ======= -->
-  <div class="header-bg page-area" style="background-image: url('assets/img/slide/slide-1.jpg');">
+  <div class="header-bg page-area" style="background-image: url('{{voyager::image(setting('site.dokumentasi'))}}');">
     <div class="home-overly"></div>
     <div class="container">
       <div class="row">
@@ -32,9 +32,9 @@
           <div class="page-head-blog">
             <div class="single-blog-page">
               <!-- search option start -->
-              <form action="#">
+              <form action="{{url('/post')}}" method="GET" role="search">
                 <div class="search-option">
-                  <input type="text" placeholder="Search...">
+                  <input type="text" placeholder="Search" id="term" name="term">
                   <button class="button" type="submit">
                     <i class="fa fa-search"></i>
                   </button>
