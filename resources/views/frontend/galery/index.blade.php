@@ -29,7 +29,7 @@
             <h4>{{$img->category_id}}</h4>
             <p>{{$img->title}}</p>
             <div class="portfolio-links">
-              <a href="/storage/{{$img->image_1}}" data-gall="portfolioGallery" class="venobox" title="{{$img->title}}"><i class="icofont-eye"></i></a>
+              <a href="{{Voyager::image($img->image_1)}}" data-gall="portfolioGallery" class="venobox" title="{{$img->title}}"><i class="icofont-eye"></i></a>
               <a href="/galery/{{$img->slug}}" title="More Details"><i class="icofont-external-link"></i></a>
             </div>
           </div>

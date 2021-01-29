@@ -4,7 +4,7 @@
 <main id="main">
 
   <!-- ======= Blog Header ======= -->
-  <div class="header-bg page-area" style="background-image: url('assets/img/slide/slide-2.jpg');">
+  <div class="header-bg page-area" style="background-image: url('{{voyager::image(setting('site.foto_pengurus'))}}');">
     <div class="home-overly"></div>
     <div class="container">
       <div class="row">

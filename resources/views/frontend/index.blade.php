@@ -10,29 +10,29 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
-  <link href="{{url('/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  <link rel="shortcut icon" href="{{asset('assets/img/favicon.ico')}}">
+  <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="{{url('/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-  <link href="{{url('/assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
-  <link href="{{url('/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-  <link href="{{url('/assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
-  <link href="{{url('/assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
-  <link href="{{url('/assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-  <link rel="stylesheet" href="{{url('/vendor/owlcarousel/owl.theme.default.min.css')}}">
-  <link href="{{url('/assets/vendor/aos/aos.css')}}" rel="stylesheet">
-  <link href="{{url('/assets/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
-  <link href="{[url('/assets/vendor/nivo-slider/css/nivo-slider.css')]}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('assets/vendor/owl.carousel/assets/owl.theme.default.min.css')}}">
+  <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/nivo-slider/css/nivo-slider.css')}}" rel="stylesheet">
 
 
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/css/custom.css')}}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Mamba - v2.5.0
@@ -48,8 +48,8 @@
   <section id="topbar" class="d-none d-lg-block">
     <div class="container clearfix">
       <div class="contact-info float-left">
-        <i class="icofont-envelope"></i><a href="mailto:contact@example.com">info@ukmfippena.or.id</a>
-        <i class="icofont-phone">082337193376</i>
+        <i class="icofont-envelope"></i><a href="mailto:{{setting('site.email')}}">{{setting('site.email')}}</a>
+        <i class="icofont-phone">{{setting('site.phone')}}</i>
       </div>
       <div class="social-links float-right">
         <a href="https://www.facebook.com/ukmf.p.utm" class="facebook"><i class="icofont-facebook"></i></a>
@@ -66,7 +66,7 @@
       <div class="logo float-left">
         <!-- <h1 class="text-light"><a href="{{url('/')}}"><span></span></a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="{{url('/')}}"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+        <a href="{{url('/')}}"><img src="{{asset('assets/img/logo.png')}}" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu float-right d-none d-lg-block">
@@ -75,11 +75,11 @@
           <li><a href="#blog">Berita</a></li>
           <li><a href="#portfolio">Dokumentasi</a></li>
           <li><a href="#team">DKO</a></li>
-          <li class="drop-down"><a href="{{'/page'}}">Profil</a>
+          <li class="drop-down"><a href="{{url('/page')}}">Profil</a>
             <ul>
-              <li><a href="#">Sejarah</a></li>
-              <li><a href="#">Arti Lambang</a></li>
-              <li><a href="#">Visi Misi</a></li>
+              <li><a href="{{url('/page/sejarah-ukm-fkip-pena')}}">Sejarah</a></li>
+              <li><a href="{{url('/page/arti-lambang')}}">Arti Lambang</a></li>
+              <li><a href="{{url('/page/visi-misi')}}">Visi Misi</a></li>
               <li class="drop-down"><a href="#">Struktur</a>
                 <ul>
                   <li><a href="#">Dewan Kehormatan</a></li>
@@ -121,7 +121,7 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url('assets/img/slide/slide-1.jpg');">
+          <div class="carousel-item active" style="background-image: url('{{voyager::image(setting('site.Welcome'))}}');">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Selamat datang di <span>UKM FIP PENA</span></h2>
@@ -131,7 +131,7 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url('assets/img/slide/slide-2.jpg');">
+          <div class="carousel-item" style="background-image: url('{{voyager::image(setting('site.foto_pengurus'))}}');">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Pengurus Organisasi 2021</h2>
@@ -141,7 +141,7 @@
           </div>
 
           <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image: url('assets/img/slide/slide-3.jpg');">
+          <div class="carousel-item" style="background-image: url('{{voyager::image(setting('site.dokumentasi'))}}');">
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Berita Utama</h2>
@@ -173,8 +173,8 @@
 
         <div class="row no-gutters">
           <div class="col-lg-6 video-box">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=ie1Q6IwRU8w" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            <img src="{{voyager::image(setting('site.bg_profile'))}}" class="img-fluid" alt="">
+            <a href="{{setting('site.profile')}}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
@@ -341,7 +341,7 @@
     </div>
     </section>End Services Section -->
     <!-- ======= Blog Section ======= -->
-    <div id="blog" class="blog-area">
+    <section id="blog" class="blog-area">
       <div class="blog-inner area-padding">
         <div class="blog-overly"></div>
         <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -357,14 +357,14 @@
             <div class="mr-2 ml-2">
               <div class="single-blog">
                 <div class="single-blog-img">
-                  <a href="#">
+                  <a href="/post/{{$itemPost->slug}}">
                     <img src="{{Voyager::image($itemPost->thumbnail('cropped'))}}" alt="" width="100%">
                   </a>
                 </div>
                 <div class="blog-meta">
                   <span class="comments-type">
                     <i class="fa fa-comment-o"></i>
-                    <a href="#">13 comments</a>
+                    <a href="/post/{{$itemPost->slug}}">{{$jml}} comments</a>
                   </span>
                   <span class="date-type">
                     <i class="fa fa-calendar"></i>{{$itemPost->created_at}}
@@ -372,7 +372,7 @@
                 </div>
                 <div class="blog-text">
                   <h4>
-                    <a href="blog.html">{{$itemPost->title}}</a>
+                    <a href="/post/{{$itemPost->slug}}">{{$itemPost->title}}</a>
                   </h4>
                   <p>
                     {{$itemPost->excerpt}}
@@ -389,7 +389,7 @@
           <center><a href="/post"><button class="ready-btn" style="color:darkslategrey;">Lebih Banyak</button></a></center>
         </div>
       </div>
-    </div><!-- End Blog Section -->
+    </section><!-- End Blog Section -->
     <!-- ======= Our Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -418,7 +418,7 @@
                 <h4>{{$img->category_id}}</h4>
                 <p>{{$img->title}}</p>
                 <div class="portfolio-links">
-                  <a href="/storage/{{$img->image_1}}" data-gall="portfolioGallery" class="venobox" title="{{$img->title}}"><i class="icofont-eye"></i></a>
+                  <a href="{{Voyager::image($img->image_1)}}" data-gall="portfolioGallery" class="venobox" title="{{$img->title}}"><i class="icofont-eye"></i></a>
                   <a href="/galery/{{$img->slug}}" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
@@ -444,7 +444,7 @@
 
           <div class="card mr-2 ml-2" data-aos="fade-up">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img/team/team-1.jpg')}}" alt=""></div>
               <div class="member-info">
                 <h4>Aris Kusuma Hidayat, S.Pd.</h4>
                 <span>Periode Januari-Juni 2018</span>
@@ -460,7 +460,7 @@
 
           <div class="card mr-2 ml-2" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img/team/team-2.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Candra Kusuma, S.Pd.</h4>
                 <span>Periode Juli-Desember 2018</span>
@@ -476,7 +476,7 @@
 
           <div class="card mr-2 ml-2" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img/team/team-3.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Khoirul Huda, S.Pd.</h4>
                 <span>Periode Januari-Juni 2019</span>
@@ -492,7 +492,7 @@
 
           <div class="card mr-2 ml-2" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img/team/team-4.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Khoirus Shalihatinnur, S.Pd.</h4>
                 <span>Periode Juli-Desember 2019</span>
@@ -508,7 +508,7 @@
 
           <div class="card mr-2 ml-2" data-aos="fade-up">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-5.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img/team/team-5.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Mas Gangsar Ahmad Romadhon, S.Pd.</h4>
                 <span>Periode Januari-Juni 2020</span>
@@ -524,7 +524,7 @@
 
           <div class="card mr-2 ml-2" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-6.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img/team/team-6.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Moh Zakky Aprillaries H, S.Pd.</h4>
                 <span>Periode Juli-Desember 2020</span>
@@ -540,7 +540,7 @@
 
           <div class="card mr-2 ml-2" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-7.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img/team/team-7.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Much. Abid Aladdin, S.Pd.</h4>
                 <span>Periode Januari-Juni 2021</span>
@@ -556,7 +556,7 @@
 
           <div class="card mr-2 ml-2" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-8.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('assets/img/team/team-8.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Putri Diah Kusuma Wardani, S.Pd.</h4>
                 <span>Periode Juli-Desember 2021</span>
@@ -717,7 +717,7 @@
               Jalan Raya Telang PO BOX 02<br>
               UTM Bangkalan 69162<br><br>
               <!--<strong>Phone:</strong> +1 5589 55488 55<br>-->
-              <strong>Email:</strong> info@ukmfippena.or.id<br>
+              <strong>Email:</strong> {{setting('site.email')}}<br>
             </p>
             <div class="social-links mt-3">
               <a href="https://www.facebook.com/ukmf.p.utm" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -731,7 +731,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{{url('/')}}">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{url('/page')}}">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/post')}}">Berita Terabru</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/post')}}">Berita Terbaru</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Kegiatan</a></li>
             </ul>
           </div>
@@ -781,18 +781,18 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/nivo-slider/js/jquery.nivo.slider.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{asset('assets/vendor/jquery-sticky/jquery.sticky.js')}}"></script>
+  <script src="{{asset('assets/vendor/venobox/venobox.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/counterup/counterup.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/nivo-slider/js/jquery.nivo.slider.js')}}"></script>
+  <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
   <script>
     $(document).ready(function() {
       $(".owl-carousel").owlCarousel({
@@ -821,7 +821,7 @@
   </script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{asset('assets/js/main.js')}}"></script>
 
 </body>
 

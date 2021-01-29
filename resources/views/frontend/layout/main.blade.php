@@ -48,8 +48,8 @@
   <section id="topbar" class="d-none d-lg-block">
     <div class="container clearfix">
       <div class="contact-info float-left">
-        <i class="icofont-envelope"></i><a href="mailto:contact@example.com">info@ukmfippena.or.id</a>
-        <i class="icofont-phone">database</i>
+        <i class="icofont-envelope"></i><a href="mailto:{{setting('site.email')}}">{{setting('site.email')}}</a>
+        <i class="icofont-phone">{{setting('site.phone')}}</i>
       </div>
       <div class="social-links float-right">
         <a href="https://www.facebook.com/ukmf.p.utm" class="facebook"><i class="icofont-facebook"></i></a>
@@ -71,7 +71,7 @@
 
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="{{url('/')}}">Home</a></li>
+          <li><a href="{{url('/')}}">Home</a></li>
           <li><a href="{{url('/post')}}">Berita</a></li>
           <li><a href="{{url('/galery')}}">Dokumentasi</a></li>
           <li><a href="{{url('/struktur/dewan-kehormatan-organisasi')}}">DKO</a></li>
@@ -103,7 +103,7 @@
               <li><a href="">PENA SHOW</a></li>
             </ul>
           </li>
-          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="{{url('/contact')}}">Contact Us</a></li>
           <li><a href="login" class="btn-get-started">login</a></li>
         </ul>
       </nav><!-- .nav-menu -->

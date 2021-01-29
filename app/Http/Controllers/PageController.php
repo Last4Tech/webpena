@@ -14,10 +14,12 @@ class PageController extends Controller
 {
     public function home (){
         $post = Post::latest()->get()->random(5);
+        $id = Post::where('id', '=', $post)->value('id');
         $category = Category::all();
         $kd = Galery::distinct()->get(['category_id']);
         $image = Galery::all();
-        return view('frontend.index', compact('post', 'category', 'image', 'kd'));
+        $jml = comment::where('post_id', $id)->count('comment');
+        return view('frontend.index', compact('post', 'category', 'image', 'kd', 'jml'));
     }
     public function index (){
         $page = Page::all();
