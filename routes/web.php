@@ -32,17 +32,17 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/', [PageController::class, 'home'])->name('home');
-Route::get('/post', [PostController::class, 'index']);
-Route::get('/page', [PageController::class, 'index']);
+Route::get('/post', [PostController::class, 'index'])->name('post');
+Route::get('/page', [PageController::class, 'index'])->name('page');
 Route::post('/post/{post}', [PostController::class, 'insertdata'])->name('InsertData');
 Route::post('/page/{page}', [pageController::class, 'insertcoment'])->name('Insertcoment');
 Route::get('/post/{post}', [PostController::class, 'show'])->name('PostStage');
 Route::get('/post-category/{category}', [PostController::class, 'store'])->name('post.category');
-Route::get('/page/{slug}', [PageController::class, 'show']);
-Route::get('/galery', [GaleryController::class, 'index']);
-Route::get('/galery/{slug}', [GaleryController::class, 'show']);
-Route::get('/contact', [ContactUsController::class, 'index']);
+Route::get('/page/{slug}', [PageController::class, 'show'])->name('page.show');
+Route::get('/galery', [GaleryController::class, 'index'])->name('galery');
+Route::get('/galery/{slug}', [GaleryController::class, 'show'])->name('galery.show');
+Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactUsController::class, 'sendemail'])->name('contact.send');
 Route::post('/sub', [ContactUsController::class, 'Subscribe'])->name('sub.send');
-Route::get('/struktur/{slug}', [PageController::class, 'Struktur']);
-Route::get('/leader', [PageController::class, 'leader']);
+Route::get('/struktur/{slug}', [PageController::class, 'Struktur'])->name('struktur');
+Route::get('/leader', [PageController::class, 'leader'])->name('leader');

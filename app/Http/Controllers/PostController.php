@@ -50,7 +50,7 @@ class PostController extends Controller
      */
     public function store($slug)
     {
-        $id = Category::where('slug',$slug)->value('id');
+        $id = Category::where('slug',$slug)->value('id', 'parent_id');
         $post = Post::where('category_id', $id)->orderBy("id","desc")->paginate(5);
         $blog = Post::latest()->get()->random(3);
         $all = Post::latest()->paginate(5);

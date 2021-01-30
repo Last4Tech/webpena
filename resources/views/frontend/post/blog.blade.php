@@ -51,12 +51,12 @@
                   <!-- start single post -->
                   <div class="recent-single-post">
                     <div class="post-img">
-                      <a href="/post/{{$itemblog->slug}}">
+                      <a href="{{route('PostStage',$itemblog->slug)}}">
                         <img src="{{Voyager::image($itemblog->thumbnail('cropped'))}}" alt="">
                       </a>
                     </div>
                     <div class="pst-content">
-                      <p><a href="/post/{{$itemblog->slug}}"> {{$itemblog->title}}</a></p>
+                      <p><a href="{{route('PostStage',$itemblog->slug)}}"> {{$itemblog->title}}</a></p>
                     </div>
                   </div>
                   <!-- End single post -->
