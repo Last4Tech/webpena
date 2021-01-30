@@ -37,6 +37,7 @@ Route::get('/page', [PageController::class, 'index']);
 Route::post('/post/{post}', [PostController::class, 'insertdata'])->name('InsertData');
 Route::post('/page/{page}', [pageController::class, 'insertcoment'])->name('Insertcoment');
 Route::get('/post/{post}', [PostController::class, 'show'])->name('PostStage');
+Route::get('/post-category/{category}', [PostController::class, 'store'])->name('post.category');
 Route::get('/page/{slug}', [PageController::class, 'show']);
 Route::get('/galery', [GaleryController::class, 'index']);
 Route::get('/galery/{slug}', [GaleryController::class, 'show']);

@@ -71,7 +71,7 @@
                 <ul>
                 @foreach($category as $itemCategory)
                   <li>
-                    <a href="#">{{$itemCategory->name}}</a>
+                    <a href="{{route('post.category',$itemCategory->slug)}}">{{$itemCategory->name}}</a>
                   </li>
                 @endforeach
                 </ul>

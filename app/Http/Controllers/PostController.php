@@ -48,9 +48,14 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($slug)
     {
-        //
+        $id = Category::where('slug',$slug)->value('id');
+        $post = Post::where('category_id', $id)->orderBy("id","desc")->paginate(5);
+        $blog = Post::latest()->get()->random(3);
+        $all = Post::latest()->paginate(5);
+        $category = Category::all();
+        return view('frontend.post.blog', compact('post', 'category', 'blog'))->with('i', (request()->input('page', 1)- 1) *5);
     }
 
     /**
@@ -115,15 +120,6 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function cari(Request $request)
-    {
-        $post = Post::where([
-            ['title', '!=', null],
-            [function ($query) use ($request) {
-                if (($term =$request->term)) {
-                    $query->orWhere('name','LIKE', '%'. $term. '%')->get();
-                }
-            }]
-        ])->orderBy("id","desc")->paginate(5);
-    }
+    
+    
 }
