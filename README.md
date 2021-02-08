@@ -60,3 +60,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## syarat penggunaan aplikasi
+1. XAMPP/LAMPP atau yang lain.
+2. git 
+3. composer
+4. NPM
+5. Browser
+
+## cara install
+1. buka git lalu clone repository.
+2. pindahkan repository ke root folder xampp/lampp
+3. cp .envexample .env
+4. buat database dengan nama webpena
+5. buka web dengan alamat localhost/project-pena
